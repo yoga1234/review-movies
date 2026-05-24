@@ -7,6 +7,137 @@
       href="./assets/images/favicon.ico"
       type="image/x-icon"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
-  <body></body>
+  <body>
+    <div class="d-flex justify-content-center align-items-center vh-100" id="registerForm">
+      <div class="container border rounded p-3" style="max-width: 400px;">
+        <form>
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="registerEmail" required>
+          </div>
+          <div class="mb-3">
+            <label for="registerUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="registerUsername" required>
+          </div>
+          <div class="mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="registerPassword" required>
+          </div>
+          <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+          <div class="justify-content-center d-flex">
+            <button type="button" class="btn btn-primary" onclick="clickTest()">Daftar</button>
+          </div>
+        </form>
+        <div>
+          Sudah punya akun? <a href="#" onclick="toggleForm()"> Klik untuk masuk</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center vh-100 d-none" id="loginForm">
+      <div class="container border rounded p-3" style="max-width: 400px;">
+        <form>
+          <div class="mb-3">
+            <label for="loginUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="loginUsername" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required>
+          </div>
+          <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div> -->
+          <div class="justify-content-center d-flex">
+            <button type="button" class="btn btn-primary" onclick="loginClick()">Masuk</button>
+          </div>
+        </form>
+        <div>
+          Belum punya akun? <a href="#" onclick="toggleForm()"> Klik untuk registrasi</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>    
+    // localStorage.clear();
+    let userData;
+      if (!localStorage.getItem("userData")) {
+        userData = {
+          abdzufar: {
+            email: "zufarafuz@gmail.com",
+            password: "tespassword"
+          },
+          ramarama: {
+            email: "rama57@gmail.com",
+            password: "admin"
+          }
+        }
+
+        localStorage.setItem("userData", JSON.stringify(userData))
+      } else {
+        console.log("Oi!");
+        userData = JSON.parse(localStorage.getItem("userData"));
+        console.log(userData);
+      }
+
+      function loginClick() {
+        console.log(typeof(localStorage.getItem("myCat")));
+        // console.log(localStorage.getItem("myCat") === null ? "nulsadl" : "nah");
+        const loginUsername = document.getElementById(`loginUsername`).value
+        const loginPassword = document.getElementById(`loginPassword`).value
+
+        // console.log("tes",username, password, "tes");
+        if (loginUsername === "" || loginPassword === "") {
+          Swal.fire({
+            icon: "warning",
+            title: "Oops...",
+            text: "Silakan isi kolom username dan password."
+          });
+        } else if (userData[loginUsername] === undefined || userData[loginUsername].password !== loginPassword) {
+          Swal.fire({
+            icon: "error",
+            title: "Akun tidak ditemukan",
+            text: "Mohon koreksi kembali username dan password yang Anda masukkan."
+          });
+        } else if (userData[loginUsername].password === loginPassword) {
+          Swal.fire({
+            icon: "success",
+            title: "Login berhasil"
+            // text: "Silakan isi kolom username dan password."
+          });
+        }
+      }
+
+      function toggleForm() {
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+        if (loginForm.classList.contains("d-none")) {
+          // console.log("login form hidden");
+          loginForm.classList.remove("d-none");
+          registerForm.classList.add("d-none");
+          
+          document.getElementById("registerEmail").value = "";
+          document.getElementById("registerUsername").value = "";
+          document.getElementById("registerPassword").value = "";
+          
+        } else {
+          loginForm.classList.add("d-none");
+          registerForm.classList.remove("d-none");
+          document.getElementById("loginUsername").value = "";
+          document.getElementById("loginPassword").value = "";
+        }
+        // loginForm.style.display = loginForm.style.display === 'none' ? '' : 'none';
+        // registerForm.style.display = registerForm.style.display === 'none' ? '' : 'none';
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  </body>
 </html>
