@@ -3,7 +3,7 @@ let movieData;
 if (!localStorage.getItem("movieData")) {
     movieData = [
         {
-            name: "Monster",
+            title: "Monster",
             releaseDate: 2023,
             director: "Hirokazu Kore-eda",
             genre: ["Thriller", "Mystery", "Drama"],
@@ -12,7 +12,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/cOpWDxxiwoE?si=wyStRLx6_6uJXl49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>` // digenerate langsung dari youtube. ga perlu dipake klo mau bikin sendiri
         },
         {
-            name: "Jojo Rabbit",
+            title: "Jojo Rabbit",
             releaseDate: 2019,
             director: "Taika Waititi",
             genre: ["War", "Comedy", "Drama"],
@@ -21,7 +21,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/tL4McUzXfFI?si=dZ6E6rS2K3Que3gn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
         },
         {
-            name: "Hidden Figures",
+            title: "Hidden Figures",
             releaseDate: 2016,
             director: "Theodore Melfi",
             genre: ["Drama", "History"],
@@ -30,7 +30,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/5wfrDhgUMGI?si=kT7O3qPlew62mgav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
         },
         {
-            name: "The Imitation Game",
+            title: "The Imitation Game",
             releaseDate: 2014,
             director: "Morten Tyldum",
             genre: ["Drama", "War", "Thriller", "History"],
@@ -39,7 +39,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/j2jRs4EAvWM?si=_eJvFBDNc2aJXYEN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
         },
         {
-            name: "The Help",
+            title: "The Help",
             releaseDate: 2011,
             director: "Tate Taylor",
             genre: ["Drama"],
@@ -48,7 +48,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/3eajzW3XW7Q?si=F_y72coPJcZxWFyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
         },
         {
-            name: "Ada Apa dengan Cinta?",
+            title: "Ada Apa dengan Cinta?",
             releaseDate: 2002,
             director: "Rudi Soedjarwo",
             genre: ["Romance", "Drama"],
@@ -57,7 +57,7 @@ if (!localStorage.getItem("movieData")) {
             trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/mSZ-ySRW29k?si=kD5745sqx5pOqFQS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
         },
         {
-            name: "The Truman Show",
+            title: "The Truman Show",
             releaseDate: 1998,
             director: "Peter Weir",
             genre: ["Comedy", "Drama"],
