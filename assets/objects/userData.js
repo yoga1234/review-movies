@@ -4,14 +4,16 @@ let userData;
 if (!localStorage.getItem("userData")) {
     userData = {
         abdzufar: {
-        email: "zufarafuz@gmail.com",
-        salt: "G]bbE",
-        password: "Ufxx|twi67(LbggJ" //Password12#
+            username: "abdzufar",
+            email: "zufarafuz@gmail.com",
+            salt: "G]bbE",
+            password: "Ufxx|twi67(LbggJ" // Password12#
         },
         ramarama: {
-        email: "rama57@gmail.com",
-        salt: "8yYk+",
-        password: "Wfmfxnf87&=~^p0" // Rahasia32!
+            username: "ramarama",
+            email: "rama57@gmail.com",
+            salt: "8yYk+",
+            password: "Wfmfxnf87&=~^p0" // Rahasia32!
         }
     }
     localStorage.setItem("userData", JSON.stringify(userData))
@@ -19,6 +21,9 @@ if (!localStorage.getItem("userData")) {
     userData = JSON.parse(localStorage.getItem("userData"));
     // console.log(userData);
 }
+
+let currentUser = localStorage.getItem("currentUser");
+// console.log(currentUser);
 
 const allEmails = [];
 for (const key in userData) {
