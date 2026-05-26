@@ -1,5 +1,3 @@
-let currentUser = undefined;
-
 function checkRegistrationUsername() {
     const registerUsername = document.getElementById(`registerUsername`)
     if (Object.keys(userData).includes(registerUsername.value) || !registerUsername.value) {
@@ -76,19 +74,21 @@ function registerClick() {
     const registerEmail = document.getElementById(`registerEmail`);
 
     if (registerEmail.classList.contains("is-valid") && registerPassword.classList.contains("is-valid") && registerUsername.classList.contains("is-valid")) {
+        let salt = generateSalt();
+        userData[registerUsername.value] = {
+            username: registerUsername.value,
+            email: registerEmail.value,
+            salt: salt,
+            password: encryptShift(registerPassword.value + salt)
+        }
+        currentUser = userData[registerUsername.value];
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+        localStorage.setItem("userData", JSON.stringify(userData));
         Swal.fire({
             icon: "success",
             title: "Registrasi berhasil",
             text: "Silakan klik tombol di bawah untuk lanjut."
         }).then(function () {
-            let salt = generateSalt();
-            userData[registerUsername.value] = {
-                email: registerEmail.value,
-                salt: salt,
-                password: encryptShift(registerPassword.value + salt)
-            }
-            currentUser = userData[registerUsername.value];
-            localStorage.setItem("userData", JSON.stringify(userData));
             // console.log(userData);
             window.location.href = "../index.html"
         });
@@ -137,11 +137,12 @@ function loginClick() {
         });
         console.log(loginPassword.value);
     } else if (userData[loginUsername.value].password === encryptShift(loginPassword.value + userData[loginUsername.value].salt)) {
+        currentUser = userData[loginUsername.value]
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
         Swal.fire({
             icon: "success",
             title: "Login berhasil"
         }).then(function () {
-            currentUser = userData[loginUsername.value]
             window.location.href = "../index.html"
         });
     }
