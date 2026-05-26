@@ -17,7 +17,7 @@ if (!localStorage.getItem("movieData")) {
     {
       title: "Jojo Rabbit",
       releaseDate: 2019,
-      imgName: "jojo-rabbit.jpg",
+      imgName: "jojo-rabit.jpg",
       director: "Taika Waititi",
       genre: ["War", "Comedy", "Drama"],
       synopsis:
