@@ -15,20 +15,26 @@
       <div class="container border rounded p-3" style="max-width: 400px;">
         <form>
           <div class="mb-3">
-            <label for="registerEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="registerEmail" required>
-          </div>
-          <div class="mb-3">
             <label for="registerUsername" class="form-label">Username</label>
-            <input type="text" class="form-control" id="registerUsername" required>
+            <input type="text" class="form-control" id="registerUsername" onblur="checkRegistrationUsername()" required>
+            <div class="invalid-feedback">
+              Username tidak dapat digunakan.
+            </div>
           </div>
           <div class="mb-3">
             <label for="registerPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="registerPassword" required>
+            <input type="password" class="form-control" id="registerPassword" onblur="checkRegistrationPassword()" required>
             <div id="passwordHelp" class="form-text">Gunakan kombinasi huruf besar, huruf kecil, angka, dan simbol minimal 8 karakter.</div>
           </div>
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="registerEmail" onblur="checkRegistrationEmail()" required>
+            <div class="invalid-feedback">
+              Email tidak dapat digunakan.
+            </div>
+          </div>
           <div class="justify-content-center d-flex">
-            <button type="button" class="btn btn-primary" onclick="clickTest()">Daftar</button>
+            <button type="button" class="btn btn-primary" onclick="registerClick()">Daftar</button>
           </div>
         </form>
         <div>
@@ -36,17 +42,17 @@
         </div>
       </div>
     </div>
-
+    <!-- Form Login -->
     <div class="d-flex justify-content-center align-items-center vh-100 d-none" id="loginForm">
       <div class="container border rounded p-3" style="max-width: 400px;">
         <form>
           <div class="mb-3">
             <label for="loginUsername" class="form-label">Username</label>
-            <input type="text" class="form-control" id="loginUsername" required>
+            <input type="text" class="form-control" id="loginUsername" onblur="checkLoginUsername()" required>
           </div>
           <div class="mb-3">
             <label for="loginPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="loginPassword" required>
+            <input type="password" class="form-control" id="loginPassword" onblur="checkLoginPassword()" required>
           </div>
           <div class="justify-content-center d-flex">
             <button type="button" class="btn btn-primary" onclick="loginClick()">Masuk</button>
