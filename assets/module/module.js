@@ -6,7 +6,7 @@ header.innerHTML = `
   <div class="navbar">
     <div class="left-side">MOVIE REVIEW</div>
     <div class="right-side">
-      <a href="#">HOME</a>
+      <a href="../index.html">HOME</a>
       <a href="./pages/movielist.html">MOVIE LIST</a>
       <a href="./pages/daftarlogin.html">LOGIN</a>
     </div>
