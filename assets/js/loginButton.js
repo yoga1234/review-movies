@@ -24,10 +24,28 @@ function loginLogout() {
       if (loginStatus === true) {
         loginButton.href = "#";
 
-        if (confirm("Apakah Anda ingin logout?") === true) {
-          localStorage.setItem("currentUser", "");
-          location.reload();
-        }
+        // sweetalert confirm
+        Swal.fire({
+          title: "Anda yakin?",
+          text: "Anda mencoba logout",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          cancelButtonText: "Batal",
+          confirmButtonText: "Logout",
+        }).then((result) => {
+          if (result.isConfirmed)
+            Swal.fire({
+              title: "LOGOUT",
+              text: "Logout berhasil.",
+              icon: "success",
+            }).then(function () {
+              localStorage.setItem("currentUser", "");
+              location.reload();
+            });
+        });
+        // sweet alert confirm
       }
     });
   }
