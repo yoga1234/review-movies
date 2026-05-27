@@ -3,6 +3,7 @@ let movieData;
 if (!localStorage.getItem("movieData")) {
   movieData = [
     {
+      id: 101,
       title: "Monster",
       releaseDate: 2023,
       imgName: "monster.jpg",
@@ -15,6 +16,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/cOpWDxxiwoE?si=wyStRLx6_6uJXl49" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, // digenerate langsung dari youtube. ga perlu dipake klo mau bikin sendiri
     },
     {
+      id: 102,
       title: "Jojo Rabbit",
       releaseDate: 2019,
       imgName: "jojo-rabit.jpg",
@@ -27,6 +29,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/tL4McUzXfFI?si=dZ6E6rS2K3Que3gn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
     {
+      id: 103,
       title: "Hidden Figures",
       releaseDate: 2016,
       imgName: "hidden-figures.jpg",
@@ -39,6 +42,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/5wfrDhgUMGI?si=kT7O3qPlew62mgav" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
     {
+      id: 104,
       title: "The Imitation Game",
       releaseDate: 2014,
       imgName: "the-imitation-game.jpg",
@@ -51,6 +55,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/j2jRs4EAvWM?si=_eJvFBDNc2aJXYEN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
     {
+      id: 105,
       title: "The Help",
       releaseDate: 2011,
       imgName: "the-help.jpg",
@@ -63,6 +68,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/3eajzW3XW7Q?si=F_y72coPJcZxWFyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
     {
+      id: 106,
       title: "Ada Apa dengan Cinta?",
       releaseDate: 2002,
       imgName: "ada-apa-dengan-cinta.jpg",
@@ -75,6 +81,7 @@ if (!localStorage.getItem("movieData")) {
       trailerEmbeddedHTML: `<iframe width="560" height="315" src="https://www.youtube.com/embed/mSZ-ySRW29k?si=kD5745sqx5pOqFQS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
     },
     {
+      id: 107,
       title: "The Truman Show",
       releaseDate: 1998,
       imgName: "the-truman-show.jpg",
