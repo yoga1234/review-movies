@@ -1,5 +1,3 @@
-// loop data movie
-// buat fungsi untuk memotong sinopsis jika terlalu panjang
 let moviesData = JSON.parse(localStorage.getItem("movieData"));
 let movieListCardContainer = document.getElementById(
   "movielist-card-container",
