@@ -15,6 +15,10 @@ function cutSynopsis(synopsisString) {
   return result;
 }
 
+function setActiveMovie(id) {
+  localStorage.setItem("activeMovie", String(id));
+}
+
 function renderMovieList(data) {
   movieListCardContainer.innerHTML = "";
 
@@ -32,7 +36,7 @@ function renderMovieList(data) {
             <p class="card-text">
             ${cutSynopsis(data[i].synopsis)}
             </p>
-            <a href="#" class="btn btn-primary">Lihat Detail</a>
+            <a onclick="setActiveMovie(${data[i].id})"  href="./movieDetails.html" class="btn btn-primary">Lihat Detail</a>
         </div>
       </div>
     `;
