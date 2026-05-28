@@ -17,7 +17,15 @@ function loginLogout() {
 
   // change the text
   if (loginStatus === true) {
-    loginButton.innerHTML = "LOGOUT";
+    let userLogin = JSON.parse(localStorage.getItem("currentUser"));
+
+    loginButton.innerHTML = userLogin.username;
+    loginButton.addEventListener("mouseenter", () => {
+      loginButton.innerHTML = `<span style="font-size: 17px">klik untuk logout</span>`;
+    });
+    loginButton.addEventListener("mouseleave", () => {
+      loginButton.innerHTML = userLogin.username;
+    });
     loginButton.addEventListener("click", (e) => {
       e.preventDefault();
 
