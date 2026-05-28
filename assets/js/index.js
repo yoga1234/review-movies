@@ -23,7 +23,7 @@ indexContainer.innerHTML = `
       </p>
       <p><em>${data1.releaseDate}</em></p>
       <blockquote class="blockquote">
-        <p><i>${data1.genre}</i></p>
+        <p><i>${data1.genre.join(", ")}</i></p>
       </blockquote>
     </div>
   </div>
@@ -40,7 +40,7 @@ indexContainer.innerHTML += `
       </p>
       <p><em>${data2.releaseDate}</em></p>
       <blockquote class="blockquote">
-        <p><i>${data2.genre}</i></p>
+        <p><i>${data2.genre.join(", ")}</i></p>
       </blockquote>
     </div>
     <div class="col-sm-4">
