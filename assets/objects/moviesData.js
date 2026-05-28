@@ -8,6 +8,7 @@ movieData = [
     imgName: "monster.jpg",
     director: "Hirokazu Kore-eda",
     genre: ["Thriller", "Mystery", "Drama"],
+    rating: 4.3,
     synopsis:
       "After an outburst at school involving her son, a concerned single mother demands answers, triggering a sequence of deepening suspicion and turmoil.",
     trailerYTLink:
@@ -21,6 +22,7 @@ movieData = [
     imgName: "jojo-rabit.jpg",
     director: "Taika Waititi",
     genre: ["War", "Comedy", "Drama"],
+    rating: 4.0,
     synopsis:
       "Jojo, a lonely German boy during World War II has his world shaken when he learns that his single mother is hiding a Jewish girl in their home. Influenced by a buffoonish imaginary version of Adolf Hitler, he begins to question his beliefs and confront the conflict between propaganda and his own humanity.",
     trailerYTLink:
@@ -34,6 +36,7 @@ movieData = [
     imgName: "hidden-figures.jpg",
     director: "Theodore Melfi",
     genre: ["Drama", "History"],
+    rating: 3.9,
     synopsis:
       "The untold story of Katherine G. Johnson, Dorothy Vaughan and Mary Jackson - brilliant African-American women working at NASA and serving as the brains behind one of the greatest operations in history - the launch of astronaut John Glenn into orbit. The visionary trio crossed all gender and race lines to inspire generations to dream big.",
     trailerYTLink:
@@ -47,6 +50,7 @@ movieData = [
     imgName: "the-imitation-game.jpg",
     director: "Morten Tyldum",
     genre: ["Drama", "War", "Thriller", "History"],
+    rating: 3.8,
     synopsis:
       "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain's top-secret Government Code and Cypher School at Bletchley Park, during the darkest days of World War II.",
     trailerYTLink:
@@ -60,6 +64,7 @@ movieData = [
     imgName: "the-help.jpg",
     director: "Tate Taylor",
     genre: ["Drama"],
+    rating: 3.9,
     synopsis:
       "Aibileen Clark is a middle-aged African-American maid who has spent her life raising white children and has recently lost her only son; Minny Jackson is an African-American maid who has often offended her employers despite her family's struggles with money and her desperate need for jobs; and Eugenia “Skeeter” Phelan is a young white woman who has recently moved back home after graduating college to find out her childhood maid has mysteriously disappeared. These three stories intertwine to explain how life in Jackson, Mississippi revolves around “the help”; yet they are always kept at a certain distance because of racial lines.",
     trailerYTLink:
@@ -73,6 +78,7 @@ movieData = [
     imgName: "ada-apa-dengan-cinta.jpg",
     director: "Rudi Soedjarwo",
     genre: ["Romance", "Drama"],
+    rating: 3.9,
     synopsis:
       "A popular high school girl strains her relationship with her close-knit clique when she begins falling for a reclusive, lower-class schoolmate.",
     trailerYTLink:
@@ -86,6 +92,7 @@ movieData = [
     imgName: "the-truman-show.jpg",
     director: "Peter Weir",
     genre: ["Comedy", "Drama"],
+    rating: 4.2,
     synopsis:
       "In a picture-perfect seaside town, an insurance salesman begins to realize that his entire existence may be staged and observed by a vast unseen audience as part of a reality TV show.",
     trailerYTLink:
