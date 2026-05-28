@@ -3,7 +3,7 @@ const loginButton = document.getElementById("login-button");
 function cekLoginStatus() {
   let userLogin = localStorage.getItem("currentUser");
 
-  if (userLogin.length === 0) {
+  if (userLogin === null || userLogin.length === 0) {
     return false;
   }
 
@@ -49,9 +49,17 @@ function loginLogout() {
       }
     });
   }
+  // pathname : '/pages/movielist.html', '/pages/movieDetails.html'
   if (loginStatus === false) {
     loginButton.innerHTML = "LOGIN";
-    loginButton.href = "./pages/daftarlogin.html";
+    if (
+      window.location.pathname === "/pages/movieDetails.html" ||
+      window.location.pathname === "/pages/movielist.html"
+    ) {
+      loginButton.href = "./daftarlogin.html";
+    } else {
+      loginButton.href = "./pages/daftarlogin.html";
+    }
   }
 }
 
