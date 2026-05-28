@@ -88,7 +88,7 @@ function renderActiveMovie() {
 							${moviesData[i].genre}
 						</p>
 						<p style="font-weight: 400; margin-top: 50px" class="h4">
-								Rating: <span style="font-weight: 300">4.3</span> / 5
+								Rating: <span style="font-weight: 300">${getAvgRating(currentActiveMovie, JSON.parse(localStorage.getItem("reviewData")))}</span> / 5
 						</p>
 						<p class="lead" style="margin-top: 10px">
 							${moviesData[i].synopsis}
