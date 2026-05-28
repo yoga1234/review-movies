@@ -61,10 +61,8 @@ function loginLogout() {
   if (loginStatus === false) {
     loginButton.innerHTML = "LOGIN";
     if (
-      window.location.pathname === "/pages/movieDetails.html" ||
-      window.location.pathname === "/pages/movielist.html" ||
       window.location.pathname.search("movielist.html") !== -1 ||
-      window.location.pathname.search("movieDetails.html") !== -1
+      window.location.pathname.search("moviedetails.html") !== -1
     ) {
       loginButton.href = "./daftarlogin.html";
     } else {
