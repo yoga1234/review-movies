@@ -15,8 +15,15 @@
     />
     <link rel="stylesheet" href="../assets/module/module.css" />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
       .card {
         margin-top: 50px;
+      }
+      .loading-text {
+        margin-top: 50px;
+        font-size: 27px;
+        font-family: "Montserrat", sans-serif;
       }
     </style>
   </head>
@@ -33,6 +40,30 @@
     </div>
     <div style="margin-top: 50px" id="movielist-container">
       <div class="container">
+        <form id="moviecarijudul" class="row g-3">
+          <div class="col-auto">
+            <label for="carijudul" class="visually-hidden">Password</label>
+            <input
+              type="text"
+              class="form-control"
+              id="carijudul"
+              placeholder="Judul Film"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">
+              Cari Film
+            </button>
+            <button
+              id="search-reset-button"
+              type="button"
+              class="btn btn-outline-danger mb-3"
+            >
+              RESET
+            </button>
+          </div>
+        </form>
         <div class="row" id="movielist-card-container"></div>
       </div>
     </div>
