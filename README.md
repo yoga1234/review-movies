@@ -1,6 +1,1 @@
-<!-- color pallete yang digunakan -->
-
-#222831
-#393E46
-#00ADB5
-#EEEEEE
+# Hackathon PHASE 0
